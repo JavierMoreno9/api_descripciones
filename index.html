@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesador de CSV para Descripciones de Productos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    
+</head>
+<body class="p-4">
+    <div class="container">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Procesador de CSV para Descripciones de Productos</h1>
+
+        <div class="mb-6">
+            <p class="text-gray-700 text-sm">Pega aquí el contenido de tu archivo CSV. Asegúrate de que las columnas estén separadas por punto y coma (`;`).</p>
+            <p class="text-gray-700 text-sm mt-2">Columnas esperadas (pueden ser más, pero estas son las importantes para la búsqueda):</p>
+            <p class="text-gray-700 text-sm font-semibold">`Nombre del Proveedor;URL principal del Proveedor;Nombre completo y exacto del Producto;Número de Modelo / MPN / SKU o Referencia;EAN`</p>
+        </div>
+
+        <div class="form-group mb-6">
+            <label for="input-csv" class="block text-sm mb-1">Pega aquí tu CSV de entrada:</label>
+            <textarea id="input-csv" class="form-textarea" placeholder="Ejemplo:
+originUrl;gsm_accessories_limit
+https://b2b.innpro.eu/eng_m_GSM-accessories-15025.html;300
+"></textarea>
+        </div>
+
+        <button id="process-btn" class="btn w-full">Procesar CSV</button>
+
+        <p id="loading-indicator" class="text-center mt-4">Procesando productos... <span id="progress-text"></span></p>
+
+        <div class="mt-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-3">CSV de Salida:</h2>
+            <textarea id="output-csv" class="form-textarea w-100" readonly></textarea>
+            <button id="copy-btn" class="btn w-full mt-3" style="display: none;">Copiar CSV al Portapapeles</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

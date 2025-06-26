@@ -1,0 +1,82 @@
+
+     body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #334155;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .form-group label {
+            font-weight: 600;
+            color: #4a5568;
+        }
+        .form-group input,
+        .form-group textarea {
+            border: 1px solid #cbd5e1;
+            padding: 0.75rem;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6; /* Blue-500 */
+        }
+        .form-group textarea {
+            min-height: 150px;
+            width: 100%;
+            display: block;
+        }
+        .btn {
+            background-color: #3b82f6; /* Blue-500 */
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .btn:hover {
+            background-color: #2563eb; /* Blue-600 */
+            transform: translateY(-1px);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+        .btn:disabled {
+            background-color: #9e9e9e;
+            cursor: not-allowed;
+        }
+        #loading-indicator {
+            display: none;
+            color: #4a5568;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        #results-area {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            min-height: 200px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin-top: 1.5rem;
+            font-family: 'monospace'; /* Better for CSV output */
+        }
+        .error {
+            color: #ef4444; /* Red-500 */
+            font-weight: 600;
+        }
+        .success {
+            color: #22c55e; /* Green-500 */
+            font-weight: 600;
+        }
